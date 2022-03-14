@@ -15,14 +15,14 @@
         <div id="map"></div>
         <script>
             var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            attribution: ['&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', 'POI via <a href="http://overpass-turbo.eu/">Overpass Turbo</a>']
 
             });
 
 
             var ICV = L.tileLayer.wms('https://terramapas.icv.gva.es/odcv05_etrs89h30_2021?service=wms&request=getcapabilities',{
                 layers: 'odcv05_etrs89h30_2021_rgb',
-                attribution: 'Ortofotografia 2021 CC BY 4.0 &copy; <a href="https://icv.gva.es/va/">Institut Cartogràfic Valencià, Generalitat</a>'
+                attribution: ['Ortofotografia 2021 CC BY 4.0 &copy; <a href="https://icv.gva.es/va/">Institut Cartogràfic Valencià, Generalitat</a>', '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', 'Hidrants via <a href="http://overpass-turbo.eu/">Overpass Turbo</a>']
               });
 
 
@@ -49,14 +49,17 @@
   "type": "FeatureCollection",
   "generator": "overpass-ide",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2022-03-14T08:19:39Z",
+  "timestamp": "2022-03-14T14:13:24Z",
   "features": [
     {
       "type": "Feature",
       "properties": {
         "@id": "node/618998881",
-        "historic": "monument",
-        "name": "Falla Cervantes"
+        "artwork_type": "falla",
+        "name": "Falla Cervantes",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1952",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -71,10 +74,10 @@
       "type": "Feature",
       "properties": {
         "@id": "node/997978138",
-        "access": "yes",
-        "historic": "monument",
-        "inscription": "Es un lugar donde hay una falla de gran altura.",
-        "name": "Falla Albuixarres Camí Fondo"
+        "artwork_type": "falla",
+        "name": "Falla Albuixarres Camí-Fondo",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -89,8 +92,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1630232457",
-        "historic": "monument",
-        "name": "Falla Topairet"
+        "artwork_type": "falla",
+        "name": "Falla Topairet",
+        "opening_hours": "Mar 16-19",
+        "start_date": "2008",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -105,8 +111,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1639649078",
-        "historic": "monument",
-        "name": "Falla El Pilar"
+        "artwork_type": "falla",
+        "name": "Falla El Pilar",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1984",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -121,8 +130,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921432684",
-        "historic": "monument",
-        "name": "Falla Carrer de Lliria"
+        "artwork_type": "falla",
+        "name": "Falla Carrer de Lliria",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1949",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -137,8 +149,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921459602",
-        "historic": "monument",
-        "name": "Falla el Picaor"
+        "artwork_type": "falla",
+        "name": "Falla el Picaor",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1976",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -153,8 +168,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921515639",
-        "historic": "monument",
-        "name": "Falla Montemontiel"
+        "artwork_type": "falla",
+        "name": "Falla Monte Montiel",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1972",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -169,8 +187,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921537148",
-        "historic": "monument",
-        "name": "Falla Espardeñà"
+        "artwork_type": "falla",
+        "name": "Falla Espardenyà",
+        "official_name": "Falla l'Espardenyada",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1979",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -185,8 +207,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921551544",
-        "historic": "monument",
-        "name": "Falla Plaça de Bous"
+        "artwork_type": "falla",
+        "name": "Falla Plaça de Bous",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1948",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -201,8 +226,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1921755494",
-        "historic": "monument",
-        "name": "Falla El Penyot"
+        "artwork_type": "falla",
+        "name": "Falla El Penyot",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1958",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -217,9 +245,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/3908252907",
-        "historic": "monument",
-        "inscription": "Els Llumeners",
-        "name": "Falla del Barri de La Llum"
+        "artwork_type": "falla",
+        "name": "Falla Barri de la Llum",
+        "name:ca": "Falla Barri de la Llum",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -234,9 +264,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4744188532",
-        "historic": "monument",
-        "name": "Falla",
-        "name:es": "Falla"
+        "artwork_type": "falla",
+        "name": "Falla Pintor Domingo - Guillem de Castro",
+        "name:ca": "Falla Pintor Domingo - Guillem de Castro",
+        "name:es": "Falla Pintor Domingo - Guillem de Castro",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -250,27 +283,11 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/4744188534",
-        "historic": "monument",
-        "name": "Falla",
-        "name:es": "Falla"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.3795817,
-          39.4712931
-        ]
-      },
-      "id": "node/4744188534"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/4744203327",
-        "historic": "monument",
-        "name": "Falla",
-        "name:es": "Falla Linterna Na Robella"
+        "artwork_type": "falla",
+        "name": "Falla Llanterna-Na Rovella-Avinguda Oest",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -285,10 +302,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4744203332",
-        "historic": "monument",
-        "name": "Falla del Convento de Jerusalén",
-        "name:ca": "Falla del Convent de Jerusalem",
-        "name:es": "Falla del Convento de Jerusalén",
+        "artwork_type": "falla",
+        "name": "Falla del Convent de Jerusalem - Matemàtic Marçal",
+        "name:ca": "Falla del Convent de Jerusalem - Matemàtic Marçal",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork",
         "wikidata": "Q18696196",
         "wikipedia": "ca:Falla Convent de Jerusalem"
       },
@@ -305,9 +323,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4744207923",
-        "historic": "monument",
-        "name": "Falla",
-        "name:es": "Falla Plaza del Pilar"
+        "artwork_type": "falla",
+        "name": "Falla Plaça del Pilar",
+        "name:ca": "Falla Plaça del Pilar",
+        "name:es": "Falla Plaza del Pilar",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -322,15 +343,18 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816299422",
-        "historic": "monument",
-        "name": "Falla Periodista Azzatti",
-        "name:es": "Falla Periodista Azzatti"
+        "artwork_type": "falla",
+        "name": "Falla Sant Vicent - Periodista Azzatti",
+        "name:ca": "Falla Sant Vicent - Periodista Azzatti",
+        "name:es": "Falla San Vicente - Periodista Azzati",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.3785366,
-          39.4698236
+          -0.3794199,
+          39.4701166
         ]
       },
       "id": "node/4816299422"
@@ -339,9 +363,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816327721",
-        "historic": "monument",
-        "name": "Falla Convento de Santa Clara",
-        "name:es": "Falla Convento de Santa Clara"
+        "artwork_type": "falla",
+        "name": "Falla Ribera - Convent Santa Clara",
+        "name:ca": "Falla Ribera - Convent Santa Clara",
+        "name:es": "Falla Ribera - Convento de Santa Clara",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -356,9 +383,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816360522",
-        "historic": "monument",
-        "name": "Falla Plaza de la Mercé",
-        "name:es": "Falla Plaza de la Mercé"
+        "artwork_type": "falla",
+        "name": "Falla Plaça de la Mercé",
+        "name:ca": "Falla Plaça de la Mercé",
+        "name:es": "Falla Plaza de la Mercé",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -373,10 +403,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816360523",
-        "historic": "monument",
-        "name": "Falla Mercado Central",
+        "artwork_type": "falla",
+        "name": "Falla Mercat Central",
         "name:ca": "Falla Mercat Central",
-        "opening_hours": "Mar 16-19"
+        "name:es": "Falla Mercado Central",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -391,9 +423,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816415423",
-        "historic": "monument",
-        "name": "Falla Bolsería - Tros Alt",
-        "name:es": "Falla Bolsería - Tros Alt"
+        "artwork_type": "falla",
+        "name": "Falla Bolsería Tros-Alt",
+        "name:ca": "Falla Bosseria - Tossal",
+        "name:es": "Falla Bolsería Tros-Alt",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -408,9 +443,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816417721",
-        "historic": "monument",
-        "name": "Falla Plaza Doctor Collado",
-        "name:es": "Falla Plaza Doctor Collado"
+        "artwork_type": "falla",
+        "name": "Falla Plaça Doctor Collado",
+        "name:ca": "Falla Plaça Doctor Collado+",
+        "name:es": "Falla Plaza Doctor Collado",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -425,9 +463,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816417725",
-        "historic": "monument",
-        "name": "Falla Juan de Vilarrasa",
-        "name:es": "Falla Juan de Vilarrasa"
+        "artwork_type": "falla",
+        "name": "Falla Peu de La Creu - En Joan de Vila-Rasa",
+        "name:ca": "Falla Peu de La Creu-En Joan de Vila-Rasa",
+        "name:es": "Falla Pie de La Cruz - Don Joan de Vila-Rasa",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -442,9 +483,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816444321",
-        "historic": "monument",
-        "name": "Falla Municipal",
-        "opening_hours": "Mar 16-19"
+        "artwork_type": "falla",
+        "name": "Falla de l'Ajuntament",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1942",
+        "tourism": "artwork",
+        "wikidata": "Q20104055"
       },
       "geometry": {
         "type": "Point",
@@ -459,9 +503,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816444322",
-        "historic": "monument",
-        "name": "Falla Plaza de la Reina",
-        "name:es": "Falla Plaza de la Reina"
+        "artwork_type": "falla",
+        "name": "Falla Reina - Pau - Sant Vicent",
+        "name:ca": "Falla Reina - Pau - Sant Vicent",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -476,9 +522,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816456721",
-        "historic": "monument",
-        "name": "Falla Ángel Guimerá",
-        "name:es": "Falla Ángel Guimerá"
+        "artwork_type": "falla",
+        "name": "Falla Ferran el Catòlic-Àngel Guimerà",
+        "name:ca": "Falla Ferran el Catòlic-Àngel Guimerà",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -493,9 +541,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816461421",
-        "historic": "monument",
-        "name": "Falla Espartero - Ramón y Cajal",
-        "name:es": "Falla Espartero - Ramón y Cajal"
+        "artwork_type": "falla",
+        "name": "Falla Espartero - Ramón i Cajal",
+        "name:ca": "Falla Espartero - Ramón i Cajal",
+        "name:es": "Falla Espartero - Ramón y Cajal",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -510,9 +561,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816461426",
-        "historic": "monument",
-        "name": "Falla L' Antiga de Campanar",
-        "name:es": "Falla L' Antiga de Campanar"
+        "artwork_type": "falla",
+        "name": "Falla Monestir de Poblet - Aparicio Albiñana",
+        "name:ca": "Falla Monestir de Poblet - Aparicio Albiñana",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -527,9 +580,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4816487524",
-        "historic": "monument",
-        "name": "Falla Isabel la Católoca - Cirilo Amorós",
-        "name:es": "Falla Isabel la Católica - Cirilo Amorós"
+        "artwork_type": "falla",
+        "name": "Falla Isabel la Catòlica - Ciril Amorós",
+        "name:ca": "Falla Isabel la Catòlica - Ciril Amorós",
+        "name:es": "Falla Isabel la Católica - Cirilo Amorós",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -544,9 +600,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930367822",
-        "historic": "monument",
-        "name": "Falla Serranos - Plaza de los Fueros",
-        "name:es": "Falla Serranos - Plaza de los Fueros"
+        "artwork_type": "falla",
+        "name": "Falla Serrans - Plaça dels Furs",
+        "name:ca": "Falla Serrans - Plaça dels Furs",
+        "name:es": "Falla Serranos - Plaza de los Fueros",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -561,9 +620,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930367823",
-        "historic": "monument",
-        "name": "Falla Conde de Salvatierra - Cirilo Amorós",
-        "name:es": "Falla Conde de Salvatierra - Cirilo Amorós"
+        "artwork_type": "falla",
+        "name": "Falla Comte de Salvatierra - Ciril Amorós",
+        "name:ca": "Falla Comte de Salvatierra - Ciril Amorós",
+        "name:es": "Falla Conde de Salvatierra - Cirilo Amorós",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -578,9 +640,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930413824",
-        "historic": "monument",
+        "artwork_type": "falla",
         "name": "Falla Quart - Palomar",
-        "name:es": "Falla Quart - Palomar"
+        "name:ca": "Falla Quart - Palomar",
+        "name:es": "Falla Quart - Palomar",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -595,9 +660,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930418822",
-        "historic": "monument",
+        "artwork_type": "falla",
         "name": "Falla Na Jordana",
-        "name:es": "Falla Na Jordana"
+        "name:ca": "Falla Na Jordana",
+        "name:es": "Falla Na Jordana",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -612,9 +680,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930448326",
-        "historic": "monument",
+        "artwork_type": "falla",
         "name": "Falla Cuba - Puerto Rico",
-        "name:es": "Falla Cuba - Puerto Rico"
+        "name:ca": "Falla Cuba - Puerto Rico",
+        "name:es": "Falla Cuba - Puerto Rico",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -629,9 +700,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930448522",
-        "historic": "monument",
-        "name": "Falla Grabador Esteve - Cirilo Amorós",
-        "name:es": "Falla Grabador Esteve - Cirilo Amorós"
+        "artwork_type": "falla",
+        "name": "Falla Gravador Esteve - Ciril Amorós",
+        "name:ca": "Falla Gravador Esteve - Ciril Amorós",
+        "name:es": "Falla Grabador Esteve - Cirilo Amorós",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -646,9 +720,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930448622",
-        "historic": "monument",
-        "name": "Falla Plaza del Bisbe Amigó - Cuenca",
-        "name:es": "Falla Plaza del Bisbe Amigó - Cuenca"
+        "artwork_type": "falla",
+        "name": "Falla Bisbe Amigó - Conca",
+        "name:ca": "Falla Bisbe Amigó - Conca",
+        "name:es": "Falla Obispo Amigó - Cuenca",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -663,9 +740,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930462322",
-        "historic": "monument",
-        "name": "Falla Jesús - San Francisco de Borja",
-        "name:es": "Falla Jesús - San Francisco de Borja"
+        "artwork_type": "falla",
+        "name": "Falla Jesús - Sant Francesc de Borja",
+        "name:ca": "Falla Jesús - Sant Francesc de Borja",
+        "name:es": "Falla Jesús - San Francisco de Borja",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -680,9 +760,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930462323",
-        "historic": "monument",
-        "name": "Falla Cuba - Literato Azorín",
-        "name:es": "Falla Cuba - Literato Azorín"
+        "artwork_type": "falla",
+        "name": "Falla Cuba - Literat Azorín",
+        "name:ca": "Falla Cuba - Literat Azorín",
+        "name:es": "Falla Cuba - Literato Azorín",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -697,9 +780,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930463921",
-        "historic": "monument",
-        "name": "Falla Santa María Micaela - Martín el Humano",
-        "name:es": "Falla Santa María Micaela - Martín el Humano"
+        "artwork_type": "falla",
+        "name": "Santa Maria Micaela - Martí l'Humà",
+        "name:ca": "Santa Maria Micaela - Martí l'Humà",
+        "name:es": "Falla Santa María Micaela - Martín el Humano",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -714,9 +800,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930486521",
-        "historic": "monument",
-        "name": "Falla Plaza del Pintor Segrelles",
-        "name:es": "Falla Plaza del Pintor Segrelles"
+        "artwork_type": "falla",
+        "name": "Falla Plaça del Pintor Segrelles",
+        "name:ca": "Falla Plaça del Pintor Segrelles",
+        "name:es": "Falla Plaza del Pintor Segrelles",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -731,9 +820,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930496923",
-        "historic": "monument",
-        "name": "Falla Cádiz - Los Centelles",
-        "name:es": "Falla Cádiz - Los Centelles"
+        "artwork_type": "falla",
+        "name": "Falla Càdis - els Centelles",
+        "name:ca": "Falla Càdis - els Centelles",
+        "name:es": "Falla Cádiz - Los Centelles",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -748,10 +840,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930498221",
-        "historic": "monument",
+        "artwork_type": "falla",
         "name": "Falla Sueca - Literat Azorín",
         "name:ca": "Falla Sueca - Literat Azorín",
-        "name:es": "Falla Suecia - Literato Azorín"
+        "name:es": "Falla Sueca - Literato Azorín",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -766,9 +860,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930498224",
-        "historic": "monument",
-        "name": "Falla Pintor Salvador Albril - Pedro III el Grande",
-        "name:es": "Falla Pintor Salvador Albril - Pedro III el Grande"
+        "artwork_type": "falla",
+        "name": "Falla Pintor Salvador Abril-Pere III El Gran",
+        "name:ca": "Falla Pintor Salvador Abril-Pere III El Gran",
+        "name:es": "Falla Pintor Salvador Albril - Pedro III el Grande",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -783,9 +880,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930498225",
-        "historic": "monument",
-        "name": "Falla Reino de Valencia - Duque de Calabria",
-        "name:es": "Falla Reino de Valencia - Duque de Calabria"
+        "artwork_type": "falla",
+        "name": "Falla Regne de València - Duc de Calàbria",
+        "name:ca": "Falla Regne de València - Duc de Calàbria",
+        "name:es": "Falla Reino de Valencia - Duque de Calabria",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -800,9 +900,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930498226",
-        "historic": "monument",
-        "name": "Falla Maestro Gonzalbo - Conde de Altea",
-        "name:es": "Falla Maestro Gonzalbo - Conde de Altea"
+        "artwork_type": "falla",
+        "name": "Falla Mestre Gonzalbo - Compte d'Altea",
+        "name:ca": "Falla Mestre Gonzalbo - Compte d'Altea",
+        "name:es": "Falla Maestro Gonzalbo - Conde de Altea",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -817,9 +920,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930501822",
-        "historic": "monument",
+        "artwork_type": "falla",
         "name": "Falla Pintor Salvador Abril - Peris i Valero",
-        "name:es": "Falla Pintor Salvador Abril - Peris i Valero"
+        "name:ca": "Falla Pintor Salvador Abril - Peris i Valero",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -834,9 +939,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930501922",
-        "historic": "monument",
-        "name": "Falla Almirante Cadarso - Conde de Altea",
-        "name:es": "Falla Almirante Cadarso - Conde de Altea"
+        "artwork_type": "falla",
+        "name": "Falla Almirant Cadarso - Compte d'Altea",
+        "name:ca": "Falla Almirant Cadarso - Compte d'Altea",
+        "name:es": "Falla Almirante Cadarso - Conde de Altea",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -851,9 +959,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930501923",
-        "historic": "monument",
-        "name": "Falla Císcar - Burriana",
-        "name:es": "Falla Císcar - Burriana"
+        "artwork_type": "falla",
+        "name": "Falla Císcar - Borriana",
+        "name:ca": "Falla Císcar - Borriana",
+        "name:es": "Falla Císcar - Burriana",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -868,9 +979,12 @@
       "type": "Feature",
       "properties": {
         "@id": "node/4930502124",
-        "historic": "monument",
-        "name": "Falla Joaquín Costa - Conde de Altea",
-        "name:es": "Falla Joaquín Costa - Conde de Altea"
+        "artwork_type": "falla",
+        "name": "Falla Joaquim Costa - Compte d'Altea",
+        "name:ca": "Falla Joaquim Costa - Compte d'Altea",
+        "name:es": "Falla Joaquín Costa - Conde de Altea",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -885,9 +999,10 @@
       "type": "Feature",
       "properties": {
         "@id": "node/7246047100",
-        "historic": "monument",
-        "inscription": "Monumento fallero de la agrupación Falla Cuba - Buenos Aires, en el cruce de ambas calles",
-        "name": "Falla Cuba - Buenos Aires"
+        "artwork_type": "falla",
+        "name": "Falla Cuba - Buenos Aires",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -902,8 +1017,11 @@
       "type": "Feature",
       "properties": {
         "@id": "node/7685842226",
-        "historic": "monument",
-        "name": "Falla Atra que tal \"el borrego\""
+        "artwork_type": "falla",
+        "name": "Falla Atra que tal \"el borrego\"",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1952",
+        "tourism": "artwork"
       },
       "geometry": {
         "type": "Point",
@@ -913,6 +1031,263 @@
         ]
       },
       "id": "node/7685842226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464200",
+        "artwork_type": "falla",
+        "name": "Falla Camp-Roig",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1017492,
+          38.836491
+        ]
+      },
+      "id": "node/9577464200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464202",
+        "artwork_type": "falla",
+        "name": "Falla Campaments",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.099901,
+          38.8395637
+        ]
+      },
+      "id": "node/9577464202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464204",
+        "artwork_type": "falla",
+        "name": "Falla Darrere del Castell",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1019005,
+          38.8418854
+        ]
+      },
+      "id": "node/9577464204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464206",
+        "artwork_type": "falla",
+        "name": "Falla París Pedrera",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1046134,
+          38.8365547
+        ]
+      },
+      "id": "node/9577464206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464208",
+        "artwork_type": "falla",
+        "name": "Falla Port-Rotes",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1125075,
+          38.8415856
+        ]
+      },
+      "id": "node/9577464208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464209",
+        "artwork_type": "falla",
+        "name": "Falla Oeste",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1020303,
+          38.839586
+        ]
+      },
+      "id": "node/9577464209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464211",
+        "artwork_type": "falla",
+        "name": "Falla Baix la Mar",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1947",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1068786,
+          38.8448638
+        ]
+      },
+      "id": "node/9577464211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464212",
+        "artwork_type": "falla",
+        "name": "Falla les Roques",
+        "opening_hours": "Mar 16-19",
+        "start_date": "1945",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1040512,
+          38.8412365
+        ]
+      },
+      "id": "node/9577464212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464214",
+        "artwork_type": "falla",
+        "name": "Falla Centro",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.106894,
+          38.8398853
+        ]
+      },
+      "id": "node/9577464214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577464215",
+        "artwork_type": "falla",
+        "name": "Falla Saladar",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1081094,
+          38.8377216
+        ]
+      },
+      "id": "node/9577464215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577486056",
+        "artwork_type": "falla",
+        "name": "Falla la Font",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1195595,
+          38.8403141
+        ]
+      },
+      "id": "node/9577486056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577493117",
+        "artwork_type": "falla",
+        "name": "Falla Diana",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1117771,
+          38.8395024
+        ]
+      },
+      "id": "node/9577493117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577809500",
+        "artwork_type": "falla",
+        "name": "Falla Plaça Lope de Vega",
+        "name:ca": "Falla Plaça Lope de Vega",
+        "name:es": "Falla Plaza Lope de Vega",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3768508,
+          39.4739664
+        ]
+      },
+      "id": "node/9577809500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9577809501",
+        "artwork_type": "falla",
+        "name": "Falla Oest",
+        "name:ca": "Falla Oest",
+        "opening_hours": "Mar 16-19",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3795967,
+          39.4712545
+        ]
+      },
+      "id": "node/9577809501"
     }
   ]
 };
