@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="utf-8">
+        <title>Festes al País Valencià</title>
+        <link rel="stylesheet" href="./leaflet.css" />
+        <script src="./leaflet.js"></script>
+        <script src="./falles.geojson" type="text/javascript"></script>
+        <style>
+            body {margin: 0; pad: 0; }
+            #map {position: absolute; top: 0; bottom: 0; width: 100%;}
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+
+            });
+
+
+            var ICV = L.tileLayer.wms('https://terramapas.icv.gva.es/odcv05_etrs89h30_2021?service=wms&request=getcapabilities',{
+                layers: 'odcv05_etrs89h30_2021_rgb',
+                attribution: 'Ortofotografia 2021 CC BY 4.0 &copy; <a href="https://icv.gva.es/va/">Institut Cartogràfic Valencià, Generalitat</a>'
+              });
+
+
+            var map = L.map('map',{
+            center: [38.7597, -0.0570],
+            zoom: 12,
+            layers: [OSM]
+          });
+
+            var baseMaps = {
+                "OpenStreetMap": OSM,
+                "Institut Cartogràfic Valencià": ICV
+            };
+
+
+            function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+    }
+}
+
+            var falles = {
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2022-03-14T08:19:39Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/618998881",
+        "historic": "monument",
+        "name": "Falla Cervantes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5864826,
+          39.5918848
+        ]
+      },
+      "id": "node/618998881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/997978138",
+        "access": "yes",
+        "historic": "monument",
+        "inscription": "Es un lugar donde hay una falla de gran altura.",
+        "name": "Falla Albuixarres Camí Fondo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4342294,
+          39.154905
+        ]
+      },
+      "id": "node/997978138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1630232457",
+        "historic": "monument",
+        "name": "Falla Topairet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5873576,
+          39.600447
+        ]
+      },
+      "id": "node/1630232457"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1639649078",
+        "historic": "monument",
+        "name": "Falla El Pilar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5911252,
+          39.5915876
+        ]
+      },
+      "id": "node/1639649078"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921432684",
+        "historic": "monument",
+        "name": "Falla Carrer de Lliria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5849027,
+          39.5975103
+        ]
+      },
+      "id": "node/1921432684"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921459602",
+        "historic": "monument",
+        "name": "Falla el Picaor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5894668,
+          39.5970298
+        ]
+      },
+      "id": "node/1921459602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921515639",
+        "historic": "monument",
+        "name": "Falla Montemontiel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5921957,
+          39.5940268
+        ]
+      },
+      "id": "node/1921515639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921537148",
+        "historic": "monument",
+        "name": "Falla Espardeñà"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5924777,
+          39.5928784
+        ]
+      },
+      "id": "node/1921537148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921551544",
+        "historic": "monument",
+        "name": "Falla Plaça de Bous"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5899754,
+          39.5934435
+        ]
+      },
+      "id": "node/1921551544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1921755494",
+        "historic": "monument",
+        "name": "Falla El Penyot"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.58818,
+          39.5924029
+        ]
+      },
+      "id": "node/1921755494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3908252907",
+        "historic": "monument",
+        "inscription": "Els Llumeners",
+        "name": "Falla del Barri de La Llum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4152516,
+          39.4673814
+        ]
+      },
+      "id": "node/3908252907"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4744188532",
+        "historic": "monument",
+        "name": "Falla",
+        "name:es": "Falla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3794683,
+          39.4743881
+        ]
+      },
+      "id": "node/4744188532"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4744188534",
+        "historic": "monument",
+        "name": "Falla",
+        "name:es": "Falla"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3795817,
+          39.4712931
+        ]
+      },
+      "id": "node/4744188534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4744203327",
+        "historic": "monument",
+        "name": "Falla",
+        "name:es": "Falla Linterna Na Robella"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3796934,
+          39.4723246
+        ]
+      },
+      "id": "node/4744203327"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4744203332",
+        "historic": "monument",
+        "name": "Falla del Convento de Jerusalén",
+        "name:ca": "Falla del Convent de Jerusalem",
+        "name:es": "Falla del Convento de Jerusalén",
+        "wikidata": "Q18696196",
+        "wikipedia": "ca:Falla Convent de Jerusalem"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3795254,
+          39.4664479
+        ]
+      },
+      "id": "node/4744203332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4744207923",
+        "historic": "monument",
+        "name": "Falla",
+        "name:es": "Falla Plaza del Pilar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.383006,
+          39.4713675
+        ]
+      },
+      "id": "node/4744207923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816299422",
+        "historic": "monument",
+        "name": "Falla Periodista Azzatti",
+        "name:es": "Falla Periodista Azzatti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3785366,
+          39.4698236
+        ]
+      },
+      "id": "node/4816299422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816327721",
+        "historic": "monument",
+        "name": "Falla Convento de Santa Clara",
+        "name:es": "Falla Convento de Santa Clara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3767911,
+          39.4683135
+        ]
+      },
+      "id": "node/4816327721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816360522",
+        "historic": "monument",
+        "name": "Falla Plaza de la Mercé",
+        "name:es": "Falla Plaza de la Mercé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3778513,
+          39.4727743
+        ]
+      },
+      "id": "node/4816360522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816360523",
+        "historic": "monument",
+        "name": "Falla Mercado Central",
+        "name:ca": "Falla Mercat Central",
+        "opening_hours": "Mar 16-19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3779096,
+          39.4734153
+        ]
+      },
+      "id": "node/4816360523"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816415423",
+        "historic": "monument",
+        "name": "Falla Bolsería - Tros Alt",
+        "name:es": "Falla Bolsería - Tros Alt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3803074,
+          39.4760709
+        ]
+      },
+      "id": "node/4816415423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816417721",
+        "historic": "monument",
+        "name": "Falla Plaza Doctor Collado",
+        "name:es": "Falla Plaza Doctor Collado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3778007,
+          39.4743255
+        ]
+      },
+      "id": "node/4816417721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816417725",
+        "historic": "monument",
+        "name": "Falla Juan de Vilarrasa",
+        "name:es": "Falla Juan de Vilarrasa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3810819,
+          39.4738853
+        ]
+      },
+      "id": "node/4816417725"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816444321",
+        "historic": "monument",
+        "name": "Falla Municipal",
+        "opening_hours": "Mar 16-19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.376137,
+          39.4703086
+        ]
+      },
+      "id": "node/4816444321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816444322",
+        "historic": "monument",
+        "name": "Falla Plaza de la Reina",
+        "name:es": "Falla Plaza de la Reina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3755334,
+          39.4738288
+        ]
+      },
+      "id": "node/4816444322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816456721",
+        "historic": "monument",
+        "name": "Falla Ángel Guimerá",
+        "name:es": "Falla Ángel Guimerá"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3847234,
+          39.4703023
+        ]
+      },
+      "id": "node/4816456721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816461421",
+        "historic": "monument",
+        "name": "Falla Espartero - Ramón y Cajal",
+        "name:es": "Falla Espartero - Ramón y Cajal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3830113,
+          39.4679603
+        ]
+      },
+      "id": "node/4816461421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816461426",
+        "historic": "monument",
+        "name": "Falla L' Antiga de Campanar",
+        "name:es": "Falla L' Antiga de Campanar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3971428,
+          39.4837353
+        ]
+      },
+      "id": "node/4816461426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816487524",
+        "historic": "monument",
+        "name": "Falla Isabel la Católoca - Cirilo Amorós",
+        "name:es": "Falla Isabel la Católica - Cirilo Amorós"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3700108,
+          39.468017
+        ]
+      },
+      "id": "node/4816487524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930367822",
+        "historic": "monument",
+        "name": "Falla Serranos - Plaza de los Fueros",
+        "name:es": "Falla Serranos - Plaza de los Fueros"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3761382,
+          39.4788444
+        ]
+      },
+      "id": "node/4930367822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930367823",
+        "historic": "monument",
+        "name": "Falla Conde de Salvatierra - Cirilo Amorós",
+        "name:es": "Falla Conde de Salvatierra - Cirilo Amorós"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3677923,
+          39.4689745
+        ]
+      },
+      "id": "node/4930367823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930413824",
+        "historic": "monument",
+        "name": "Falla Quart - Palomar",
+        "name:es": "Falla Quart - Palomar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.383698,
+          39.4759781
+        ]
+      },
+      "id": "node/4930413824"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930418822",
+        "historic": "monument",
+        "name": "Falla Na Jordana",
+        "name:es": "Falla Na Jordana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3801193,
+          39.4810645
+        ]
+      },
+      "id": "node/4930418822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930448326",
+        "historic": "monument",
+        "name": "Falla Cuba - Puerto Rico",
+        "name:es": "Falla Cuba - Puerto Rico"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3764538,
+          39.4609669
+        ]
+      },
+      "id": "node/4930448326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930448522",
+        "historic": "monument",
+        "name": "Falla Grabador Esteve - Cirilo Amorós",
+        "name:es": "Falla Grabador Esteve - Cirilo Amorós"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3664842,
+          39.4694663
+        ]
+      },
+      "id": "node/4930448522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930448622",
+        "historic": "monument",
+        "name": "Falla Plaza del Bisbe Amigó - Cuenca",
+        "name:es": "Falla Plaza del Bisbe Amigó - Cuenca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3862678,
+          39.4665976
+        ]
+      },
+      "id": "node/4930448622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930462322",
+        "historic": "monument",
+        "name": "Falla Jesús - San Francisco de Borja",
+        "name:es": "Falla Jesús - San Francisco de Borja"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3838498,
+          39.4657942
+        ]
+      },
+      "id": "node/4930462322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930462323",
+        "historic": "monument",
+        "name": "Falla Cuba - Literato Azorín",
+        "name:es": "Falla Cuba - Literato Azorín"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3755185,
+          39.4599067
+        ]
+      },
+      "id": "node/4930462323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930463921",
+        "historic": "monument",
+        "name": "Falla Santa María Micaela - Martín el Humano",
+        "name:es": "Falla Santa María Micaela - Martín el Humano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3918469,
+          39.4720871
+        ]
+      },
+      "id": "node/4930463921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930486521",
+        "historic": "monument",
+        "name": "Falla Plaza del Pintor Segrelles",
+        "name:es": "Falla Plaza del Pintor Segrelles"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3860666,
+          39.4639259
+        ]
+      },
+      "id": "node/4930486521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930496923",
+        "historic": "monument",
+        "name": "Falla Cádiz - Los Centelles",
+        "name:es": "Falla Cádiz - Los Centelles"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3721772,
+          39.4596953
+        ]
+      },
+      "id": "node/4930496923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930498221",
+        "historic": "monument",
+        "name": "Falla Sueca - Literat Azorín",
+        "name:ca": "Falla Sueca - Literat Azorín",
+        "name:es": "Falla Suecia - Literato Azorín"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.374277,
+          39.4604265
+        ]
+      },
+      "id": "node/4930498221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930498224",
+        "historic": "monument",
+        "name": "Falla Pintor Salvador Albril - Pedro III el Grande",
+        "name:es": "Falla Pintor Salvador Albril - Pedro III el Grande"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3699772,
+          39.462413
+        ]
+      },
+      "id": "node/4930498224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930498225",
+        "historic": "monument",
+        "name": "Falla Reino de Valencia - Duque de Calabria",
+        "name:es": "Falla Reino de Valencia - Duque de Calabria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3664196,
+          39.4635847
+        ]
+      },
+      "id": "node/4930498225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930498226",
+        "historic": "monument",
+        "name": "Falla Maestro Gonzalbo - Conde de Altea",
+        "name:es": "Falla Maestro Gonzalbo - Conde de Altea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3694236,
+          39.4654914
+        ]
+      },
+      "id": "node/4930498226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930501822",
+        "historic": "monument",
+        "name": "Falla Pintor Salvador Abril - Peris i Valero",
+        "name:es": "Falla Pintor Salvador Abril - Peris i Valero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3684485,
+          39.4602006
+        ]
+      },
+      "id": "node/4930501822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930501922",
+        "historic": "monument",
+        "name": "Falla Almirante Cadarso - Conde de Altea",
+        "name:es": "Falla Almirante Cadarso - Conde de Altea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3683725,
+          39.4659264
+        ]
+      },
+      "id": "node/4930501922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930501923",
+        "historic": "monument",
+        "name": "Falla Císcar - Burriana",
+        "name:es": "Falla Císcar - Burriana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3653781,
+          39.4657431
+        ]
+      },
+      "id": "node/4930501923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4930502124",
+        "historic": "monument",
+        "name": "Falla Joaquín Costa - Conde de Altea",
+        "name:es": "Falla Joaquín Costa - Conde de Altea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3674037,
+          39.4663561
+        ]
+      },
+      "id": "node/4930502124"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7246047100",
+        "historic": "monument",
+        "inscription": "Monumento fallero de la agrupación Falla Cuba - Buenos Aires, en el cruce de ambas calles",
+        "name": "Falla Cuba - Buenos Aires"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3768187,
+          39.4615304
+        ]
+      },
+      "id": "node/7246047100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7685842226",
+        "historic": "monument",
+        "name": "Falla Atra que tal \"el borrego\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5889791,
+          39.5904458
+        ]
+      },
+      "id": "node/7685842226"
+    }
+  ]
+};
+            
+L.geoJSON(falles, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+L.control.layers(baseMaps).addTo(map);
+          </script>
+    </body>
+    </html>
